@@ -1,36 +1,36 @@
 /**
  * ============================================================================
- * EHYLEEN · Red de Viveros Aliados y Catálogo Fitosanitario del Caribe
+ * EHYLEEN · Red de Viveros Aliados y 10 Referentes Mundiales de Jardinería
  * ============================================================================
  */
 
 export const NURSERIES_DATA = Object.freeze([
   {
-    id: "vivero-caribe-norte",
-    name: "Alianza Vivero Costa Verde",
+    id: "vivero-costa-verde",
+    name: "Vivero Costa Verde",
     zone: "Vía al Mar · Puerto Colombia",
-    specialty: "Palmas de gran porte y arbolado tropical resistente a brisa marina",
-    certifications: "Aclimatación 100% Salina y Sol Directo",
-    leadSpecies: ["Palma Bismarckia Nobilis", "Palma Real Caribeña", "Guayacán Rosado", "Lluvia de Oro"],
-    logistics: "Despacho con grúa autocargable y cepellón protegido"
+    specialty: "Palmas tropicales y arbustos ornamentales adaptados a sol directo y brisa marina",
+    certifications: "Plantas aclimatadas al calor de Barranquilla (30°C - 38°C)",
+    leadSpecies: ["Palma Bismarckia", "Palma Real", "Guayacán", "Lluvia de Oro"],
+    logistics: "Transporte cuidadoso con cepellón hidratado y listo para trasplante"
   },
   {
-    id: "vivero-botanico-tropical",
-    name: "Reserva Follaje & Exóticas",
+    id: "reserva-follaje-tropical",
+    name: "Reserva Botánica Follajes",
     zone: "Corredor Juan Mina · Barranquilla",
-    specialty: "Plantas de sombra, sotobosque escultórico y especies para interiores de lujo",
-    certifications: "Control Biológico de Plagas sin Químicos Agresivos",
-    leadSpecies: ["Monstera Deliciosa XL", "Ficus Lyrata Candelabro", "Philodendron Selloum", "Alpinia Roja"],
-    logistics: "Macetas de terrazo y concreto arquitectónico listas para instalar"
+    specialty: "Plantas de follaje exuberante, sombra y semisombra para patios y áreas cubiertas",
+    certifications: "Cultivo bajo sombrío técnico y nutrición foliar balanceada",
+    leadSpecies: ["Monstera Deliciosa", "Ficus Lyrata", "Philodendron Selloum", "Arecas"],
+    logistics: "Plantas vigorosas libres de plagas, listas para siembra inmediata"
   },
   {
-    id: "vivero-sustratos-magdalena",
-    name: "BioSustratos & Enmiendas del Atlántico",
+    id: "bioabonos-magdalena",
+    name: "Tierras y Abonos del Magdalena",
     zone: "Sabanagrande / Ribera del Magdalena",
-    specialty: "Tierra negra fértil, humus de lombriz californiana y cascarilla aireada",
-    certifications: "Retención Óptima de Humedad para Altas Temperaturas (32°C - 38°C)",
-    leadSpecies: ["Sustrato Premium para Penthouses", "Abono Orgánico Compostado", "Capa Drenante de Arlita"],
-    logistics: "Embalaje técnico sin suciedad para edificios y zonas comunes"
+    specialty: "Tierra negra tamizada, compost maduro, humus de lombriz y cascarilla de arroz",
+    certifications: "Alta retención de humedad y porosidad para climas cálidos",
+    leadSpecies: ["Tierra Abonada Enriquecida", "Humus Orgánico Puro", "Sustratos de Aireación"],
+    logistics: "Despacho en sacos limpios y dosificados para jardines limpios"
   }
 ]);
 
@@ -38,81 +38,81 @@ export const BENCHMARKS_DATA = Object.freeze([
   {
     id: 1,
     name: "Raymond Jungles Inc.",
-    location: "Miami, Florida (Trópico / Caribe)",
-    focus: "Paisajismo Tropical de Ultra-Lujo",
-    desc: "El máximo referente mundial para clima cálido y costero. Transiciones orgánicas entre alta arquitectura y selva refinada.",
-    lesson: "Adaptación exacta a microclimas como Barranquilla y Puerto Colombia."
+    location: "Miami, EE.UU. · Clima Tropical",
+    focus: "Jardinería Tropical Exuberante",
+    desc: "Referente mundial en cultivo y combinación de flora tropical cálida. Selección botánica densa y balanceada de palmas y sotobosque.",
+    lesson: "Manejo experto de especies adaptadas a la radiación solar y la humedad del Caribe."
   },
   {
     id: 2,
     name: "Wirtz International",
     location: "Schoten, Bélgica",
-    focus: "Escultura Botánica & Geometría Limpia",
-    desc: "Líderes europeos en setos arquitectónicos, simetría y diseño paisajístico de gran escala.",
-    lesson: "Estructura para accesos corporativos y condominios cerrados de alto standing."
+    focus: "Poda Escultural y Setos Vivos",
+    desc: "Maestros indiscutibles en la poda formativa, diseño de setos continuos y mantenimiento de líneas verdes perfectas.",
+    lesson: "Técnicas de poda rigurosa y silueta vegetal para jardines siempre ordenados."
   },
   {
     id: 3,
-    name: "Edmund Hollander Architects",
+    name: "Edmund Hollander Associates",
     location: "Nueva York / The Hamptons",
-    focus: "Narrativa Visual & Fichas de Autor",
-    desc: "Sus sitios y libros son obras de arte que justifican presupuestos millonarios mediante storytelling visual.",
-    lesson: "Presentación editorial tipo 'coffee-table book' digital para el cliente."
+    focus: "Cuidado Hortícola y Follajes Nobles",
+    desc: "Reconocido por la preservación botánica de grandes extensiones verdes y la integración de especies adaptadas al suelo costero.",
+    lesson: "Tratamiento del jardín como un activo biológico de alto valor que madura con los años."
   },
   {
     id: 4,
     name: "Luciano Giubbilei",
     location: "Londres / Florencia",
-    focus: "Minimalismo & Textura Botánica",
-    desc: "Patios minimalistas, juegos de sombras, iluminación indirecta y fuentes lineales de agua.",
-    lesson: "Inspiración para penthouses, spas y terrazas privadas en El Golf y Riomar."
+    focus: "Composición Botánica Sobria",
+    desc: "Especialista en paletas verdes monocromáticas, juego de alturas y texturas de hoja en espacios exteriores íntimos.",
+    lesson: "Elegancia basada en la sobriedad vegetal y la pureza de las especies seleccionadas."
   },
   {
     id: 5,
     name: "Fernando Caruncho",
     location: "Madrid, España",
-    focus: "Luz, Filosofía & Agua",
-    desc: "El jardín como templo de calma. Geometría mediterránea que dialoga con horizontes infinitos.",
-    lesson: "Eje conceptual para casas campestres en Caujaral y Sabanilla."
+    focus: "Geometría Verde y Ritmo de Plantación",
+    desc: "Filosofía del jardín orientada al orden botánico, el ritmo de los árboles y la serenidad natural.",
+    lesson: "Composiciones verdes armónicas que brindan frescura y descanso visual."
   },
   {
     id: 6,
     name: "Patrick Blanc",
     location: "París, Francia",
-    focus: "Jardines Verticales Hidropónicos",
-    desc: "Inventor de los muros vegetales urbanos para Atelier Jean Nouvel y los museos más icónicos del planeta.",
-    lesson: "Aislamiento térmico natural y bioarquitectura para fachadas corporativas."
+    focus: "Botánica Vertical y Plantas Epífitas",
+    desc: "Botánico e investigador pionero en el comportamiento de especies trepadoras y sistemas vegetales verticales.",
+    lesson: "Selección rigurosa de plantas con raíces aptas para diversos soportes y orientaciones de sol."
   },
   {
     id: 7,
     name: "Madison Cox Associates",
     location: "París / Tánger / Marrakech",
-    focus: "Jardines Privados Exclusivos (Jardín Majorelle)",
-    desc: "Exclusividad total para coleccionistas y clientes de alto patrimonio.",
-    lesson: "Servicio confidencial 'Private Concierge' para clientes residenciales VIP."
+    focus: "Conservación de Jardines Botánicos",
+    desc: "Conservador botánico del célebre Jardín Majorelle. Creador de jardines privados con colecciones botánicas exclusivas.",
+    lesson: "Cuidado respetuoso de la identidad botánica de cada planta y su entorno."
   },
   {
     id: 8,
     name: "Piet Oudolf",
-    location: "Países Bajos (The High Line NY)",
-    focus: "Naturalismo Botánico & Perennes",
-    desc: "Diseño por estratos ecológicos de baja demanda hídrica y ciclos biológicos autóctonos.",
-    lesson: "Xerojardinería resiliente a la temporada seca en el Atlántico."
+    location: "Hummelo, Países Bajos",
+    focus: "Jardinería Perenne Sostenible",
+    desc: "Pionero del movimiento naturalista que celebra los ciclos de la vegetación, la resistencia biológica y el bajo requerimiento de agua.",
+    lesson: "Especies resistentes a temporadas secas con mínimo desperdicio hídrico."
   },
   {
     id: 9,
-    name: "Andy Sturgeon Design",
-    location: "Reino Unido (Chelsea Flower Show Gold)",
-    focus: "Integración de Luz Escénica & Acero",
-    desc: "Pérgolas contemporáneas, iluminación nocturna rasante y biofilia integrada.",
-    lesson: "Paquetes llave en mano: vegetación + iluminación escénica + riego inteligente."
+    name: "Andy Sturgeon",
+    location: "Brighton, Reino Unido",
+    focus: "Jardinería Contemporánea Premiada",
+    desc: "Múltiple ganador de medallas de oro en el Chelsea Flower Show por su precisión en plantación y contraste de texturas vegetales.",
+    lesson: "Detalle minucioso en la instalación y transición entre estratos de jardín."
   },
   {
     id: 10,
-    name: "The Sill & Patch Plants",
-    location: "Nueva York / Londres",
-    focus: "Experiencia Digital & Suscripción Verde",
-    desc: "Pioneros en catalogación por necesidades de luz y modelos de membresía de mantenimiento.",
-    lesson: "Estructura del cotizador interactivo y suscripciones de cuidado institucional."
+    name: "Great Dixter",
+    location: "East Sussex, Reino Unido",
+    focus: "Horticultura de Precisión y Nutrición del Suelo",
+    desc: "Institución mundial en el manejo orgánico del suelo, sucesión de floración y fertilización biológica de jardines de exhibición.",
+    lesson: "La salud del jardín nace de la fertilidad viva del sustrato y el abono orgánico."
   }
 ]);

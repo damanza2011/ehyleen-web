@@ -1,52 +1,52 @@
 /**
  * ============================================================================
- * EHYLEEN · Portafolio de Proyectos y Casos de Éxito en el Caribe
+ * EHYLEEN · Casos de Atención y Servicios de Jardinería en Barranquilla
  * ============================================================================
  */
 
 export const PROJECTS_DATA = Object.freeze([
   {
-    id: "villa-caujaral",
-    title: "Residencia Los Samanes",
-    location: "Lagos del Caujaral · Puerto Colombia",
-    category: "Residencial Campestre",
-    area: "850 m²",
-    species: "Palmas Bismarckia, Heliconias Rostrata, Setos de Eugenia y Grama San Agustín",
-    challenge: "Terreno con pendiente y exposición a brisa marina fuerte",
-    solution: "Aterrazamiento con muros de piedra caliza, cortavientos botánicos y riego automatizado por microaspersión",
-    badge: "Proyecto Destacado"
+    id: "mantenimiento-jardin-exterior",
+    title: "Mantenimiento Periódico y Poda de Setos",
+    location: "Puerto Colombia · Área Metropolitana",
+    category: "Mantenimiento Periódico",
+    serviceType: "Poda técnica, corte de césped y nutrición de suelo",
+    species: "Palmas Bismarckia, Setos de Eugenia y Grama San Agustín",
+    challenge: "Crecimiento desordenado de ramas por época de lluvias y suelo compactado",
+    solution: "Poda formativa uniforme, aireación de raíces y aplicación de abono orgánico para realzar el follaje",
+    result: "Jardín despejado, césped nivelado y setos con líneas rectas limpias y densas"
   },
   {
-    id: "penthouse-riomar",
-    title: "Terraza Bioclimática Penthouse 18",
+    id: "siembra-patio-sombra",
+    title: "Siembra y Acondicionamiento de Patio Tropical",
     location: "Altos de Riomar · Barranquilla",
-    category: "Terrazas & Penthouses",
-    area: "140 m²",
-    species: "Ficus Lyrata en macetas de terrazo pulido, Monsteras XL, Philodendron Moonlight",
-    challenge: "Peso estructural limitado y sol de poniente intenso",
-    solution: "Sustrato ultra-ligero con perlita y fibra de coco, pérgola biofílica y goteo con sensor hídrico",
-    badge: "Alta Botánica"
+    category: "Siembra & Sustratos",
+    serviceType: "Preparación de tierra y plantación de follajes",
+    species: "Monstera Deliciosa, Ficus Lyrata y Philodendron Selloum",
+    challenge: "Tierra con bajo contenido de nutrientes y drenaje deficiente",
+    solution: "Retiro de tierra estéril, incorporación de tierra negra del Magdalena con humus y cascarilla de arroz",
+    result: "Crecimiento vigoroso de hojas nuevas con color verde intenso en 30 días"
   },
   {
-    id: "fachada-corporativa",
-    title: "Muro Verde & Lobby Empresarial",
-    location: "Corredor Vía 40 · Barranquilla",
-    category: "Institucional & Corporativo",
-    area: "95 m² verticales",
-    species: "Helechos Neolepis, Epipremnum Aureum, Spathiphyllum y Fittonia",
-    challenge: "Espacio interior climatizado 24/7 y requerimiento de bajo consumo hídrico",
-    solution: "Sistema hidropónico recirculante con iluminación espectral LED y monitoreo por telemetría",
-    badge: "Bioarquitectura"
+    id: "recuperacion-sanidad-vegetal",
+    title: "Recuperación Fitosanitaria y Control de Plagas",
+    location: "Zona Norte · Barranquilla",
+    category: "Sanidad Vegetal",
+    serviceType: "Tratamiento ecológico y revitalización vegetal",
+    species: "Arecas, Crotones variados y Heliconias",
+    challenge: "Ataque severo de cochinilla algodonosa y amarilleo en hojas inferiores",
+    solution: "Limpieza manual a presión, aspersión de emulsión botánica orgánica y fertilización foliar rica en microelementos",
+    result: "Erradicación total de la plaga sin dañar el ecosistema del jardín"
   },
   {
-    id: "club-campestre",
-    title: "Zonas Verdes & Espejo de Agua",
-    location: "Sabanilla · Barranquilla Metropolitana",
-    category: "Institucional & Recreativo",
-    area: "1.200 m²",
-    species: "Lluvia de Oro, Palma Real, Lirios Acuáticos y Lenteja de Agua tratada",
-    challenge: "Conservación de biodiversidad nativa y resistencia a sequías estacionales",
-    solution: "Diseño por estratos con cobertura orgánica acolchada (*mulching*) para retener 60% más de humedad",
-    badge: "Sostenibilidad"
+    id: "renovacion-jardin-abierto",
+    title: "Renovación Integral y Resiembra de Césped",
+    location: "Sabanilla · Atlántico",
+    category: "Renovación de Jardín",
+    serviceType: "Desmalezado, nivelación y siembra de césped",
+    species: "Grama Trenza, Lluvia de Oro y coberturas vegetales",
+    challenge: "Áreas secas por exposición al sol constante y pérdida de cobertura verde",
+    solution: "Escarificado de suelo, instalación de césped fresco traído de vivero aliado y cobertura orgánica para retención de agua",
+    result: "Tapete verde continuo y uniforme resistente al calor caribeño"
   }
 ]);

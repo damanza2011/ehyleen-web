@@ -1,62 +1,67 @@
 /* ==========================================================================
-   EHYLEEN · Design Tokens & Luxury Botanical Theme
-   Arquitectura limpia conforme a estándares de Giselle Ulloa
+   EHYLEEN · Design Tokens
+   Estilo sobrio, editorial, botánico de alta gama
    ========================================================================== */
 
 :root {
-  /* Color Palette - Botanical Luxury */
-  --color-primary-dark: #0f1f18;       /* Deep Forest / Botánico Profundo */
-  --color-primary: #183327;            /* Emerald Cypress */
-  --color-primary-light: #244b3a;      /* Leaf Green */
-  --color-accent: #d4af37;             /* Champagne Gold */
-  --color-accent-light: #e6c86e;       /* Pale Gold */
-  --color-accent-dark: #a98622;        /* Antique Bronze */
+  /* Paleta Sobria & Botánica */
+  --color-primary-dark: #0f1c16;        /* Verde bosque profundo */
+  --color-primary: #183025;             /* Verde ciprés sobrio */
+  --color-primary-soft: #244335;        /* Verde follaje */
   
-  /* Neutrals */
-  --color-bg-main: #f8faf7;            /* Organic Alabaster */
-  --color-bg-card: #ffffff;            /* Pure Crisp Card */
-  --color-bg-muted: #eef2ed;           /* Soft Sage Wash */
-  --color-text-main: #141b17;          /* Mineral Charcoal */
-  --color-text-muted: #526359;         /* Damp Moss Grey */
-  --color-border: #dde4db;             /* Subtle Botanical Border */
-  --color-border-focus: #183327;
+  --color-accent: #8c734b;              /* Bronce cálido sobrio */
+  --color-accent-subtle: #d6ccbe;       /* Tono lino / arena */
+  --color-accent-dark: #634f31;
 
-  /* Botanical Accents */
-  --color-leaf: #3d7054;
-  --color-sun: #e9983d;
-  --color-water: #4a8ca7;
+  /* Fondos y Neutros */
+  --color-bg-main: #f9faf8;             /* Blanco cálido editorial */
+  --color-bg-surface: #ffffff;          /* Tarjetas limpias */
+  --color-bg-muted: #f0f3ef;            /* Gris botánico muy tenue */
+  --color-bg-dark: #0d1712;             /* Fondo nocturno institucional */
 
-  /* Typography */
-  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  /* Textos */
+  --color-text-main: #141c17;           /* Carbón vegetal */
+  --color-text-muted: #4e5e54;          /* Gris musgo sobrio */
+  --color-text-light: #f4f6f3;          /* Texto sobre fondo oscuro */
+  --color-text-subtle: #7a8a80;
+
+  /* Bordes */
+  --color-border: #dde3dc;
+  --color-border-light: #eef2ed;
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Tipografía */
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", Consolas, monospace;
 
-  /* Spacing Scale */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
+  /* Espaciado */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
-  --space-xl: 2.5rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
+  --space-xl: 2rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 5.5rem;
 
-  /* Border Radii */
+  /* Radios */
+  --radius-xs: 3px;
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(15, 31, 24, 0.05);
-  --shadow-md: 0 8px 24px rgba(15, 31, 24, 0.08);
-  --shadow-lg: 0 16px 48px rgba(15, 31, 24, 0.12);
-  --shadow-gold: 0 8px 25px rgba(212, 175, 55, 0.25);
+  /* Sombras sobrias */
+  --shadow-sm: 0 1px 3px rgba(15, 28, 22, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 28, 22, 0.07);
+  --shadow-lg: 0 12px 32px rgba(15, 28, 22, 0.09);
 
-  /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  
+  /* Transición */
+  --transition-fast: 0.18s ease-in-out;
+  --transition-smooth: 0.3s ease-in-out;
+
   /* Layout */
-  --container-max: 1240px;
-  --header-height: 80px;
+  --container-max: 1180px;
+  --header-height: 74px;
 }

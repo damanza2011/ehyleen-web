@@ -1,23 +1,17 @@
-# EHYLEEN · Paisajismo, Bioarquitectura & Alta Botánica
+# EHYLEEN · Servicios Profesionales de Jardinería
 
-Portal especializado en diseño del paisaje de alta calidad, red de viveros aliados en Barranquilla y soporte corporativo institucional.
+Portal web especializado en servicios de jardinería de alta calidad, mantenimiento botánico, podas y suministro directo de viveros aliados en Barranquilla, Atlántico.
 
-## 🚀 Inicio Rápido en Local
+- **Contacto Oficial:** +57 (300) 594-5292
+- **Sitio en Vivo:** [https://damanza2011.github.io/ehyleen-web/](https://damanza2011.github.io/ehyleen-web/)
+- **Repositorio:** [https://github.com/damanza2011/ehyleen-web](https://github.com/damanza2011/ehyleen-web)
 
-### Opción 1: Un Clic (Windows)
-Haz doble clic en `start-demo.cmd`. Se iniciará en `http://127.0.0.1:8097/`.
-
-### Opción 2: Terminal / PowerShell
+## 🚀 Inicio en Local
 ```powershell
 cd C:\Users\dan\Desktop\ehyleen-web
 python -m http.server 8097
 ```
+Abre en tu navegador: `http://localhost:8097/`.
 
-## 🛠️ Estructura del Proyecto
-- `api/`: Serverless functions para Vercel (`/api/chat` con Gemini AI y `/api/lead`).
-- `assets/css/`: Tokens de diseño botánico de lujo, componentes y concierge.
-- `assets/js/`: Módulos ES2022 desacoplados (config, cotizador, bot, viveros).
-- `vercel.json`: Cabeceras de seguridad y optimización de Edge Caching.
-
-## 🌿 Autoría y Estándar
-Desarrollado bajo el marco de **Buenas Prácticas de Ingeniería de Software** de Giselle Ulloa.
+## 🌿 Estándar de Ingeniería
+Desarrollado bajo el marco de Buenas Prácticas de Ingeniería de Software de Giselle Ulloa (Jamstack modular, sin dependencias pesadas, Single Source of Truth).

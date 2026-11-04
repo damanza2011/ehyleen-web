@@ -1,7 +1,7 @@
 /**
  * ============================================================================
- * EHYLEEN · Botanical AI Assistant Controller
- * Cumple estrictamente con AbortController, resiliencia y sanitización defensiva
+ * EHYLEEN · Asistente Botánica y Cuidado de Jardines
+ * Cumple con AbortController, resiliencia y sanitización defensiva
  * ============================================================================
  */
 
@@ -13,7 +13,7 @@ export class BotanicalChatBot {
     this.messages = [
       {
         sender: "bot",
-        text: "Hola, soy **Ehyleen Asesora**, tu asistente botánica de alta gama. ¿En qué espacio o proyecto de Barranquilla deseas integrar naturaleza viva hoy? (Ej. terraza en Riomar, casa campestre en Caujaral, o muro verde corporativo)."
+        text: "Te doy la bienvenida a **EHYLEEN**. Te oriento en servicios de jardinería profesional, siembra, podas y suministro de viveros en Barranquilla. ¿En qué podemos ayudarte con tu jardín?"
       }
     ];
     this.isThinking = false;
@@ -59,9 +59,7 @@ export class BotanicalChatBot {
 
   formatMarkdown(text) {
     let clean = this.escapeHTML(text);
-    // Bold
     clean = clean.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    // Links safe
     clean = clean.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
     return clean;
   }
@@ -80,7 +78,7 @@ export class BotanicalChatBot {
     if (this.isThinking) {
       const thinkingBubble = document.createElement("div");
       thinkingBubble.className = "chat-bubble bot";
-      thinkingBubble.innerHTML = "<em>Consultando base botánica caribeña...</em>";
+      thinkingBubble.innerHTML = "<em>Consultando guía botánica...</em>";
       this.msgList.appendChild(thinkingBubble);
     }
 
@@ -96,7 +94,6 @@ export class BotanicalChatBot {
     this.isThinking = true;
     this.renderMessages();
 
-    // AbortController con timeout de 9 segundos
     this.currentAbortController = new AbortController();
     const timeoutId = setTimeout(() => this.currentAbortController.abort(), 9000);
 
@@ -113,19 +110,16 @@ export class BotanicalChatBot {
 
       clearTimeout(timeoutId);
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       const data = await response.json();
-      const reply = data.reply || "Disculpa, no pude procesar la consulta botánica en este instante.";
+      const reply = data.reply || "Disculpa, no pude procesar la consulta en este instante.";
       this.messages.push({ sender: "bot", text: reply });
     } catch (err) {
-      console.warn("EHYLEEN Botanical Chatbot Fallback Activado:", err.message);
-      // Fallback elegante sin romper la experiencia
+      console.warn("EHYLEEN Asistente Fallback:", err.message);
       this.messages.push({
         sender: "bot",
-        text: "Para evaluar tu caso con precisión climática y botánica en Barranquilla, nuestro ingeniero agrónomo senior puede atenderte de inmediato. Puedes tocar la pestaña **'Concierge'** o [abrir WhatsApp directamente](" + CONFIG.urls.whatsappBase + ")."
+        text: "Para coordinar una revisión de tu jardín o consultar sobre plantas de vivero en Barranquilla, puedes pasar a la pestaña **Concierge** o [abrir WhatsApp directamente](" + CONFIG.urls.whatsappBase + ")."
       });
     } finally {
       this.isThinking = false;

@@ -1,7 +1,8 @@
 /**
  * ============================================================================
  * EHYLEEN · Serverless Endpoint /api/chat
- * Cumple con validación estricta, timeouts, seguridad y soporte Gemini
+ * Asesor Botánico y Cuidado de Jardines en Barranquilla
+ * Contacto Oficial: +57 (300) 594-5292
  * ============================================================================
  */
 
@@ -27,25 +28,30 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.GEMINI_API_KEY;
 
-  // Fallback botánico inteligente si no hay API key configurada en local/Vercel
+  // Fallback botánico inteligente si no hay API key configurada
   if (!apiKey) {
     return res.status(200).json({
-      reply: `🌿 Como asesora botánica de **EHYLEEN** en Barranquilla, puedo decirte que para tu consulta (*"${message.slice(0, 40)}..."*), contamos con especies aclimatadas al clima tropical como Palma Bismarckia, Monsteras XL y sistemas de bioarquitectura. Te sugiero conectar con nuestro equipo por la pestaña **Concierge** para estructurar tu proyecto.`
+      reply: `En **EHYLEEN** nos especializamos en servicios profesionales de jardinería en Barranquilla: mantenimiento preventivo, podas técnicas, siembra de plantas tropicales y suministro directo de viveros aliados en el Atlántico. Para coordinar una visita de diagnóstico para su jardín, puede escribirnos directamente al WhatsApp **300 594 5292**.`
     });
   }
 
-  const systemPrompt = `Eres Ehyleen Asesora, experta botánica y paisajista senior de la prestigiosa firma EHYLEEN en Barranquilla, Colombia.
-Tu tono es sofisticado, cálido, profesional y editorial (estilo Architectural Digest / Raymond Jungles).
-Conoces a profundidad el clima cálido, la brisa marina y la humedad del Atlántico colombiano (Altos de Riomar, Villa Campestre, Lagos del Caujaral, Puerto Colombia).
-Recomiendas especies viables: Palmas Bismarckia, Heliconias, Monsteras Deliciosas, Ficus Lyrata, xerojardinería, muros verdes hidropónicos y sustratos aireados del Magdalena.
-Mantén respuestas concisas (máximo 3 párrafos), inspiradoras y siempre invita a concretar una visita técnica a través del Concierge de WhatsApp.`;
+  const systemPrompt = `Eres el asistente botánico de EHYLEEN, servicio profesional de jardinería de alta calidad en Barranquilla, Colombia.
+Tu tono es sobrio, respetuoso, conocedor y técnico en botánica tropical.
+No hables de temas inmobiliarios, preventas, construcciones ni arquitectura civil.
+Tu especialidad es exclusivamente:
+1. Mantenimiento periódico de jardines (corte de césped San Agustín o Trenza, perfilado, deshierbe, podas sanitarias y formativas).
+2. Siembra y suministro de plantas tropicales aclimatadas al calor de Barranquilla (Palma Bismarckia, Ficus Lyrata, Monsteras, Heliconias, Crotones) provenientes de viveros aliados locales.
+3. Nutrición del suelo con tierra negra abonada, cascarilla y humus de lombriz del Magdalena.
+4. Sanidad vegetal (control ecológico de cochinilla algodonosa, hongos y deficiencias nutricionales).
+El contacto del jardinero responsable es el WhatsApp: +57 300 594 5292.
+Mantén respuestas concisas, claras y orientadas a agendar una visita de diagnóstico presencial.`;
 
   try {
     const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
     const contents = [
       { role: 'user', parts: [{ text: systemPrompt }] },
-      { role: 'model', parts: [{ text: 'Entendido. Estoy lista para asesorar a los clientes más exigentes con el más alto estándar botánico y paisajístico en Barranquilla.' }] },
+      { role: 'model', parts: [{ text: 'Entendido. Asesoraré con total sobriedad técnica sobre jardinería, cuidado vegetal y viveros en Barranquilla.' }] },
       ...(Array.isArray(history) ? history.slice(-4).map(h => ({
         role: h.sender === 'user' ? 'user' : 'model',
         parts: [{ text: h.text }]
@@ -66,19 +72,19 @@ Mantén respuestas concisas (máximo 3 párrafos), inspiradoras y siempre invita
     clearTimeout(timeout);
 
     if (!response.ok) {
-      throw new Error(`Gemini API respondió con status ${response.status}`);
+      throw new Error(`Gemini API HTTP ${response.status}`);
     }
 
     const data = await response.json();
     const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
     return res.status(200).json({
-      reply: candidate || 'Un asesor botánico de EHYLEEN estará encantado de coordinar una visita técnica contigo vía WhatsApp.'
+      reply: candidate || 'Para una valoración presencial de su jardín, puede contactar al jardinero responsable al WhatsApp 300 594 5292.'
     });
   } catch (err) {
     console.error('Error en /api/chat:', err);
     return res.status(200).json({
-      reply: '🌿 Para evaluar tu requerimiento botánico en Barranquilla con total precisión climática, te invito a pulsar la pestaña **"Concierge"** para coordinar una visita presencial con nuestro agrónomo director.'
+      reply: 'Para evaluar las necesidades de su jardín en Barranquilla y coordinar una visita de diagnóstico, por favor comuníquese directamente al WhatsApp 300 594 5292.'
     });
   }
 }

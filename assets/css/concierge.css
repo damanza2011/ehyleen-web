@@ -1,62 +1,60 @@
 /* ==========================================================================
-   EHYLEEN · Botanical Concierge & AI Assistant Styles
-   Widget dual: Pestaña "Asesora Botánica IA" & Pestaña "Concierge WhatsApp"
+   EHYLEEN · Concierge & Asistente Botánico (Diseño Sobrio)
    ========================================================================== */
 
 .concierge-floating-btn {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-primary);
   color: #ffffff;
-  border-radius: var(--radius-full);
-  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 10px 30px rgba(15, 31, 24, 0.35);
-  border: 1px solid var(--color-accent);
+  gap: 10px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 999;
   cursor: pointer;
   transition: all var(--transition-fast);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .concierge-floating-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 40px rgba(15, 31, 24, 0.45);
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
-.concierge-icon-badge {
-  width: 32px;
-  height: 32px;
-  background: var(--color-accent);
+.concierge-btn-indicator {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary-dark);
-  font-weight: 700;
-  font-size: 1.1rem;
+  background: #52c41a;
+  display: inline-block;
 }
 
 .concierge-panel {
   position: fixed;
-  bottom: 96px;
-  right: 28px;
-  width: 380px;
-  max-width: calc(100vw - 36px);
-  height: 580px;
-  max-height: calc(100vh - 130px);
+  bottom: 84px;
+  right: 24px;
+  width: 370px;
+  max-width: calc(100vw - 32px);
+  height: 540px;
+  max-height: calc(100vh - 120px);
   background: #ffffff;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(15, 31, 24, 0.25);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--color-border);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(20px) scale(0.96);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(16px) scale(0.98);
   opacity: 0;
   pointer-events: none;
 }
@@ -70,29 +68,40 @@
 .concierge-header {
   background: var(--color-primary-dark);
   color: #ffffff;
-  padding: 16px 20px;
+  padding: 14px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .concierge-header-title {
+  font-family: var(--font-serif);
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
+  letter-spacing: 0.05em;
 }
 
 .concierge-header-subtitle {
-  font-size: 0.75rem;
-  color: #a4b3ab;
+  font-size: 0.72rem;
+  color: #a7b9af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 
 .concierge-close-btn {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1;
   padding: 4px;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.concierge-close-btn:hover {
+  opacity: 1;
 }
 
 /* Tabs */
@@ -104,25 +113,27 @@
 
 .concierge-tab-btn {
   flex: 1;
-  padding: 12px;
-  font-size: 0.85rem;
+  padding: 10px 14px;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--color-text-muted);
   text-align: center;
   transition: all var(--transition-fast);
   border-bottom: 2px solid transparent;
+  background: transparent;
 }
 
 .concierge-tab-btn.active {
   color: var(--color-primary-dark);
   background: #ffffff;
-  border-bottom-color: var(--color-accent);
+  border-bottom-color: var(--color-primary);
 }
 
 .concierge-body {
   flex: 1;
   overflow-y: auto;
-  padding: 16px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
 }
@@ -131,34 +142,33 @@
 .chat-msg-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   flex: 1;
 }
 
 .chat-bubble {
-  max-width: 82%;
+  max-width: 84%;
   padding: 10px 14px;
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  line-height: 1.5;
 }
 
 .chat-bubble.bot {
   align-self: flex-start;
   background: var(--color-bg-muted);
   color: var(--color-text-main);
-  border-bottom-left-radius: 2px;
+  border: 1px solid var(--color-border-light);
 }
 
 .chat-bubble.user {
   align-self: flex-end;
   background: var(--color-primary);
   color: #ffffff;
-  border-bottom-right-radius: 2px;
 }
 
 .chat-bubble.bot a {
-  color: var(--color-leaf);
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -166,42 +176,44 @@
 /* Quick Prompts */
 .quick-prompts-bar {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   overflow-x: auto;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   margin-top: 8px;
 }
 
 .quick-prompt-chip {
   background: var(--color-bg-muted);
   border: 1px solid var(--color-border);
-  padding: 6px 12px;
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 0.72rem;
   white-space: nowrap;
   cursor: pointer;
+  color: var(--color-text-main);
   transition: all var(--transition-fast);
 }
 
 .quick-prompt-chip:hover {
-  background: var(--color-accent-light);
-  color: var(--color-primary-dark);
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
 }
 
-/* Chat Input Bar */
+/* Input Bar */
 .chat-input-bar {
   display: flex;
-  gap: 8px;
-  padding-top: 12px;
+  gap: 6px;
+  padding-top: 10px;
   border-top: 1px solid var(--color-border);
 }
 
 .chat-input {
   flex: 1;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  padding: 10px 16px;
-  font-size: 0.9rem;
+  border-radius: var(--radius-xs);
+  padding: 8px 12px;
+  font-size: 0.86rem;
   outline: none;
 }
 
@@ -212,12 +224,10 @@
 .chat-send-btn {
   background: var(--color-primary);
   color: #ffffff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: var(--radius-xs);
+  padding: 0 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
   transition: background var(--transition-fast);
 }
 
@@ -225,51 +235,56 @@
   background: var(--color-primary-dark);
 }
 
-/* Concierge Routing Tab */
+/* Concierge Routing */
 .concierge-routes-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .concierge-route-card {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 14px;
+  border-radius: var(--radius-xs);
+  padding: 12px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   cursor: pointer;
   transition: all var(--transition-fast);
   background: #ffffff;
 }
 
 .concierge-route-card:hover {
-  border-color: var(--color-accent);
-  background: rgba(212, 175, 55, 0.05);
-  transform: translateX(4px);
+  border-color: var(--color-primary);
+  background: var(--color-bg-muted);
+  transform: translateX(2px);
 }
 
-.route-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.route-bullet {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-accent);
   background: var(--color-bg-muted);
-  color: var(--color-primary);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .route-info h4 {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-family: var(--font-sans);
   font-weight: 600;
+  color: var(--color-primary-dark);
   margin-bottom: 2px;
 }
 
 .route-info p {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
+  line-height: 1.4;
 }

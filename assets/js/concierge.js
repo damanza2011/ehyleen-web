@@ -1,7 +1,8 @@
 /**
  * ============================================================================
  * EHYLEEN · Concierge Routing Controller
- * Administra las 5 rutas especializadas a WhatsApp y la apertura del panel
+ * Administra las rutas de atención especializada vía WhatsApp
+ * Enfoque sobrio y profesional sin logos informales ni emojis
  * ============================================================================
  */
 
@@ -78,11 +79,11 @@ export class ConciergeController {
     if (!container) return;
 
     container.innerHTML = "";
-    CONFIG.serviceAreas.forEach(area => {
+    CONFIG.serviceAreas.forEach((area, index) => {
       const card = document.createElement("div");
       card.className = "concierge-route-card";
       card.innerHTML = `
-        <div class="route-icon">${area.icon}</div>
+        <div class="route-bullet">0${index + 1}</div>
         <div class="route-info">
           <h4>${area.title}</h4>
           <p>${area.desc}</p>
