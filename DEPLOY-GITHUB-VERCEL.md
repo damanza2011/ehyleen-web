@@ -1,38 +1,35 @@
-# Guía de Despliegue · EHYLEEN Web (Git & Vercel)
+# Estado de Despliegue · EHYLEEN Web
 
-Este proyecto está configurado para desplegarse de manera inmediata en **GitHub** y en **Vercel**.
-
----
-
-## 1. Repositorio en GitHub
-
-1. Inicializa y enlaza a tu cuenta de GitHub (`damanza2011`):
-```powershell
-cd C:\Users\dan\Desktop\ehyleen-web
-git init
-git add .
-git commit -m "EHYLEEN · Portal de Paisajismo de Alta Gama v1.0"
-git branch -M main
-git remote add origin https://github.com/damanza2011/ehyleen-web.git
-git push -u origin main
-```
+El proyecto **EHYLEEN** ha sido desplegado exitosamente en tu cuenta de GitHub y configurado para Vercel.
 
 ---
 
-## 2. Despliegue en Vercel
+## 1. Repositorio en GitHub (¡En Vivo!)
+- **Repositorio:** [https://github.com/damanza2011/ehyleen-web](https://github.com/damanza2011/ehyleen-web)
+- **Rama principal:** `main`
+- **Estado:** 100% sincronizado y versionado.
 
-### Opción A (Vía Vercel CLI):
-```powershell
-cd C:\Users\dan\Desktop\ehyleen-web
-vercel --prod
-```
+---
 
-### Opción B (Desde el Dashboard Web de Vercel):
+## 2. GitHub Pages (¡Activo!)
+- **URL Pública:** [https://damanza2011.github.io/ehyleen-web/](https://damanza2011.github.io/ehyleen-web/)
+- El portal está en línea y accesible públicamente desde cualquier dispositivo móvil o de escritorio.
+
+---
+
+## 3. Despliegue en Vercel (Con funciones Serverless /api/chat)
 1. Ingresa a [vercel.com/new](https://vercel.com/new).
-2. Importa el repositorio `ehyleen-web`.
-3. Configuración del proyecto:
+2. Conecta tu GitHub e importa el repositorio **`ehyleen-web`**.
+3. Parámetros de configuración:
    - **Framework Preset:** `Other`.
    - **Root Directory:** `./`.
-4. Variables de Entorno (Opcional para Asistente Botánico con IA):
+4. Variables de Entorno (Opcional para Gemini AI):
    - `GEMINI_API_KEY`: Tu clave de Google AI Studio.
-5. Haz clic en **Deploy**.
+   - `GEMINI_MODEL`: `gemini-2.5-flash`.
+5. Haz clic en **Deploy**. Tendrás el portal con subdominio Vercel y Edge Functions activas en 30 segundos.
+
+---
+
+## 4. Prueba Local Rápida
+- Haz doble clic en `start-demo.cmd`.
+- Se abrirá en tu navegador en: `http://127.0.0.1:8097/`.
