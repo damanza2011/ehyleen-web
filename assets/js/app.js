@@ -2,6 +2,7 @@
  * ============================================================================
  * EHYLEEN · Orquestador Principal
  * Servicios Profesionales de Jardinería & Viveros Aliados en Barranquilla
+ * Contacto Directo: Davi Erazo · +57 (300) 594-5292
  * Conforme a estándares de Giselle Ulloa (Código limpio, modular, sin bloat)
  * ============================================================================
  */
@@ -9,8 +10,6 @@
 import { CONFIG } from './config.js';
 import { BENCHMARKS_DATA, NURSERIES_DATA } from './data/nurseries.js';
 import { PROJECTS_DATA } from './data/projects.js';
-import { ConciergeController } from './concierge.js';
-import { BotanicalChatBot } from './chat.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Renderizar 10 Referentes Mundiales de Jardinería
@@ -25,18 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 4. Configurar Formulario de Diagnóstico de Jardín (Sin cotizaciones)
   setupDiagnosticForm();
 
-  // 5. Inicializar Concierge & Chatbot Botánico
-  const panel = document.getElementById("concierge-panel");
-  const triggerBtn = document.getElementById("concierge-floating-btn");
-  if (panel && triggerBtn) {
-    new ConciergeController(panel, triggerBtn);
-    const botView = document.getElementById("concierge-bot-view");
-    if (botView) {
-      new BotanicalChatBot(botView);
-    }
-  }
-
-  // 6. Smooth Scroll
+  // 5. Smooth Scroll para enlaces de navegación
   setupSmoothScroll();
 });
 
@@ -125,7 +113,7 @@ function setupDiagnosticForm() {
     const zone = document.getElementById("diag-zone")?.value || "Barranquilla";
     const notes = document.getElementById("diag-notes")?.value.trim() || "Revisión técnica";
 
-    const msg = `Hola EHYLEEN. Deseo agendar una visita de diagnóstico para mi jardín en Barranquilla.\n\n` +
+    const msg = `Hola Davi Erazo. Deseo agendar una visita de diagnóstico para mi jardín en Barranquilla.\n\n` +
       `• Nombre: ${name}\n` +
       `• Servicio de interés: ${service}\n` +
       `• Ubicación / Sector: ${zone}\n` +
