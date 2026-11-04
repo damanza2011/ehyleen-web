@@ -1,0 +1,16 @@
+{
+  "name": "EHYLEEN · Paisajismo & Alta Botánica",
+  "short_name": "EHYLEEN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1b15",
+  "theme_color": "#142820",
+  "description": "Portal especializado en jardinería de alta calidad, diseño biofílico y red de viveros en Barranquilla",
+  "icons": [
+    {
+      "src": "/assets/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
