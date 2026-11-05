@@ -2,7 +2,7 @@
  * ============================================================================
  * EHYLEEN · Orquestador Principal
  * Servicios Profesionales de Jardinería & Viveros Aliados en Barranquilla
- * Contacto Directo: Davi Erazo · +57 (300) 594-5292
+ * Contacto Directo: +57 (300) 594-5292
  * Conforme a estándares de Giselle Ulloa (Código limpio, modular, sin bloat)
  * ============================================================================
  */
@@ -113,7 +113,7 @@ function setupDiagnosticForm() {
     const zone = document.getElementById("diag-zone")?.value || "Barranquilla";
     const notes = document.getElementById("diag-notes")?.value.trim() || "Revisión técnica";
 
-    const msg = `Hola Davi Erazo. Deseo agendar una visita de diagnóstico para mi jardín en Barranquilla.\n\n` +
+    const msg = `Hola EHYLEEN Jardinería. Deseo agendar una visita de diagnóstico para mi jardín en Barranquilla.\n\n` +
       `• Nombre: ${name}\n` +
       `• Servicio de interés: ${service}\n` +
       `• Ubicación / Sector: ${zone}\n` +
